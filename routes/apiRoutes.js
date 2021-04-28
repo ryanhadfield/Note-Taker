@@ -4,7 +4,7 @@
 
 const notesData = require('../db/db.json');
 const fs = require("fs")
-const { v4: uuidv4 } = require('uuid'); 
+const { v4: uuidv4 } = require('uuid');
 
 // ROUTING
 
@@ -30,9 +30,9 @@ module.exports = (app) => {
 
 
   app.delete('/api/notes/:id', (req, res) => {
-    notesData.forEach((note,index) => {
-    if (note.id === req.params.id)
-      notesData.splice(index,1)
+    notesData.forEach((note, index) => {
+      if (note.id === req.params.id)
+        notesData.splice(index, 1)
     })
 
 
